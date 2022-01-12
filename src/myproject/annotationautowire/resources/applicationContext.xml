@@ -6,20 +6,20 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
         
         <context:annotation-config/> 
- <bean id="account" class="myproject.annotationautowire.beans.Account" >
+ <bean id="savingAcc" class="myproject.annotationautowire.beans.Account" >
  <property name="accNo" value="A-111"/>
  <property name="accName" value="Tofique"/>
  <property name="accType" value="Savings"/>
  <property name="balance" value="25000"/>
  </bean>
  
- <!--  <bean id="account2" class="myproject.annotationautowire.beans.Account">
+ <bean id="currentAcc" class="myproject.annotationautowire.beans.Account">
  <property name="accNo" value="A-222"/>
  <property name="accName" value="Himanshu"/>
  <property name="accType" value="Current"/>
  <property name="balance" value="75000"/>
  </bean>
-  -->
+ 
  <bean id="employee" class="myproject.annotationautowire.beans.Employee" >
 <property name="eid" value="E-111"/>
 <property name="ename" value="Tofique"/>

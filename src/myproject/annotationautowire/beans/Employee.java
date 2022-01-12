@@ -1,6 +1,7 @@
 package myproject.annotationautowire.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
 
 public class Employee {
@@ -39,7 +40,8 @@ public class Employee {
 	}
 	
 	@Required
-	@Autowired
+	@Autowired(required = true)
+	@Qualifier("currentAcc")
 	public void setAcc(Account acc) {
 		this.acc = acc;
 	}
@@ -54,7 +56,7 @@ public class Employee {
 		System.out.println();
 		System.out.println("Account Details");
 		System.out.println("---------------------------------");
-		System.out.println("Account Number  : "+acc.getAccName());
+		System.out.println("Account Number  : "+acc.getAccNo());
 		System.out.println("Account Name    : "+acc.getAccName());
 		System.out.println("Account Type    : "+acc.getAccType());
 		System.out.println("Account Balance : "+acc.getBalance());
