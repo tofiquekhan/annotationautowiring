@@ -21,11 +21,15 @@
  </bean>
  
  <bean id="employee" class="myproject.annotationautowire.beans.Employee" >
-<property name="eid" value="E-111"/>
+ <constructor-arg value="E-111" index="0"/>
+ <constructor-arg value="Tofique" index="1"/>
+ <constructor-arg value="100000" index="2"/>
+ <constructor-arg value="Indore" index="3"/>
+<!-- <property name="eid" value="E-111"/>
 <property name="ename" value="Tofique"/>
 <property name="esal" value="10000"/>
 <property name="eaddr" value="Indore"/>
-<!-- <property name="acc" ref="account"/> --> 
+ --><!-- <property name="acc" ref="account"/> --> 
  
  </bean>
  
