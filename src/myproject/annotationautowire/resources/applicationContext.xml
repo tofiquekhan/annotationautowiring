@@ -11,12 +11,12 @@
  <property name="balance" value="25000"/>
  </bean>
  
- <bean id="employee" class="myproject.annotationautowire.beans.Employee">
+ <bean id="employee" class="myproject.annotationautowire.beans.Employee" autowire="byType">
 <property name="eid" value="E-111"/>
 <property name="ename" value="Tofique"/>
 <property name="esal" value="10000"/>
 <property name="eaddr" value="Indore"/>
-<property name="acc" ref="account"/> 
+<!-- <property name="acc" ref="account"/> --> 
  
  </bean>
  
