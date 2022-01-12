@@ -1,5 +1,8 @@
 package myproject.annotationautowire.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
+
 public class Employee {
 
 	private String eid;
@@ -34,6 +37,9 @@ public class Employee {
 	public Account getAcc() {
 		return acc;
 	}
+	
+	@Required
+	@Autowired
 	public void setAcc(Account acc) {
 		this.acc = acc;
 	}
