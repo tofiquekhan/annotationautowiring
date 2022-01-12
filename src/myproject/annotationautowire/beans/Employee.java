@@ -10,6 +10,9 @@ public class Employee {
 	private String ename;
 	private float esal;
 	private String eaddr;
+//	@Required
+	@Autowired(required = true)
+	@Qualifier("currentAcc")
 	private Account acc ;
 	public String getEid() {
 		return eid;
@@ -39,9 +42,7 @@ public class Employee {
 		return acc;
 	}
 	
-	@Required
-	@Autowired(required = true)
-	@Qualifier("currentAcc")
+	
 	public void setAcc(Account acc) {
 		this.acc = acc;
 	}
